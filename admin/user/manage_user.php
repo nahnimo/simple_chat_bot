@@ -29,9 +29,9 @@ if (isset($_GET['id'])) {
 				</div>
 				<div class="form-group">
 					<label for="username">Username</label>
-					<input type="text" name="username" id="username" class="form-control"
+					<input type="text" name="username" id="username" class="form-control"   
 						value="<?php echo isset($meta['username']) ? $meta['username'] : '' ?>" required
-						autocomplete="off">
+						autocomplete="off">           
 				</div>
 				<div class="form-group">
 					<label for="password">
