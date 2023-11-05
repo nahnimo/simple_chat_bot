@@ -1,7 +1,5 @@
 <?php
 require_once 'config.php';
-
-
 // Check if the user is already logged in
 if (isset($_SESSION['logged_in_user'])) {
     header('Location: index.php');
@@ -15,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = isset($_POST['password']) ? $_POST['password'] : '';
 
     // Prepare SQL query to select user data based on the provided username
-    $sql = "SELECT * FROM end_user WHERE end_username = ?";
+    $sql = "SELECT * FROM user WHERE end_username = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $username);
     $stmt->execute();

@@ -163,10 +163,10 @@ INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
 
 CREATE TABLE `users` (
   `id` int(50) NOT NULL,
-  `firstname` varchar(250) NOT NULL,
-  `lastname` varchar(250) NOT NULL,
-  `username` text NOT NULL,
-  `password` text NOT NULL,
+  `firstname` varchar(100) NOT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `username` varchar (100) NOT NULL,
+  `password` varchar (100) NOT NULL,
   `avatar` text DEFAULT NULL,
   `last_login` datetime DEFAULT NULL,
   `type` tinyint(1) NOT NULL DEFAULT 0,
@@ -177,10 +177,10 @@ CREATE TABLE `users` (
 
 CREATE TABLE `end_user` (
   `end_user_id` int(11) NOT NULL,
-  `end_username` varchar(255) NOT NULL,
-  `end_password` varchar(255) NOT NULL,
-  `end_firstname` varchar(255) NOT NULL,
-  `end_lastname` varchar(255) NOT NULL,
+  `end_username` varchar(100) NOT NULL,
+  `end_password` varchar(100) NOT NULL,
+  `end_firstname` varchar(100) NOT NULL,
+  `end_lastname` varchar(100) NOT NULL,
   `end_date_added` datetime DEFAULT NULL,
   `end_last_login` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

@@ -1,8 +1,4 @@
 
-
-
-<?php echo "yes";?>
-
 <flowise-fullchatbot></flowise-fullchatbot>
 <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
