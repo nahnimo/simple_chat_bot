@@ -16,6 +16,10 @@
                     </a>
                 </li>
             </ul>
+            <li class="nav-item">
+                 <a class="nav-link" href="logout.php">Logout</a>
+            </li>
+
             <!-- <div class="d-flex align-items-center">
                 <a class="font-weight-bolder text-light mx-2 text-decoration-none" href="./admin">Admin Login</a>
             </div> -->

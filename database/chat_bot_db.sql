@@ -174,13 +174,53 @@ CREATE TABLE `users` (
   `date_updated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+CREATE TABLE `end_user` (
+  `end_user_id` int(11) NOT NULL,
+  `end_username` varchar(255) NOT NULL,
+  `end_password` varchar(255) NOT NULL,
+  `end_firstname` varchar(255) NOT NULL,
+  `end_lastname` varchar(255) NOT NULL,
+  `end_date_added` datetime DEFAULT NULL,
+  `end_last_login` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `end_user`
+--
+
+INSERT INTO `end_user` (`end_user_id`, `end_username`, `end_password`, `end_firstname`, `end_lastname`, `end_date_added`, `end_last_login`) VALUES
+(4, 'user11', '$2y$10$MB0/awTZFfeApI/qx6mDzuyK4B5vq0nBvYsCW12hIwkAGahyO3cEq', '', '', NULL, '2023-11-05 12:36:47'),
+(24, 'ron1', '$2y$10$XkfE8euI3mISpkbaW4UdDubE8naLb4IeVPlz6hYusDpVX582425i.', '', '', NULL, '2023-11-05 12:36:47'),
+(37, 'ronron', '$2y$10$0rj5Grp8RlWLJpvBhF0sY.qfEsFbEwZfa26bQSuBYmzLn/3fCvJ3m', 'Ron', 'iglesia', NULL, '2023-11-05 12:42:53');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `end_user`
+--
+ALTER TABLE `end_user`
+  ADD PRIMARY KEY (`end_user_id`),
+  ADD UNIQUE KEY `end_username` (`end_username`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `end_user`
+--
+ALTER TABLE `end_user`
+  MODIFY `end_user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+COMMIT;
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `avatar`, `last_login`, `type`, `date_added`, `date_updated`) VALUES
-(1, 'Adminstrator', 'Admin', 'admin', '0192023a7bbd73250516f069df18b500', 'uploads/avatars/1.png?v=1649834664', NULL, 1, '2021-01-20 14:02:37', '2022-04-13 15:24:24'),
-(4, 'Mark', 'Cooper', 'mcooper', 'c7162ff89c647f444fcaa5c635dac8c3', 'uploads/avatars/4.png?v=1651645642', NULL, 2, '2022-05-04 14:27:21', '2022-05-04 14:27:22');
+(1, 'Adminstrator', 'Admin', 'admin', '0192023a7bbd73250516f069df18b500', 'uploads/avatars/1.png?v=1649834664', NULL, 1, '2021-01-20 14:02:37', '2022-04-13 15:24:24')
 
 --
 -- Indexes for dumped tables
